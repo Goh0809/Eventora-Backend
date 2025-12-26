@@ -8,19 +8,6 @@ The powerful backend API powering the **Eventora** Event Management System. Buil
 
 ---
 
-## 🏗️ System Architecture
-
-This diagram illustrates the data flow within the backend services.
-
-```mermaid
-graph TD
-    Client((Frontend)) -->|JSON Requests| API[FastAPI Server]
-    API -->|Auth & Data| Supabase[(Supabase DB)]
-    API -->|Payment Intent| Stripe[Stripe API]
-    Stripe -->|Webhook| API
-    API -->|Validation| Pydantic[Pydantic Models]
-```
-
 🛠️ Tech Stack
 
     Framework: FastAPI (Python)
@@ -124,3 +111,4 @@ Crucial: Must listen on port 10000
 Bash
 
 uvicorn app.main:app --host 0.0.0.0 --port 10000
+
