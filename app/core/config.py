@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     STRIPE_WEBHOOK_SECRET: Optional[str] = None
 
     # CORS Configuration
-    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"]
+    CORS_ORIGINS: list = ["*"]
 
     # APP Configuration
     PROJECT_NAME: str = "Eventora API"
